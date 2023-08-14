@@ -36,7 +36,8 @@ const Right = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 74px;
+  font-size: 58px;
+  color: #E6FBFB;
 `
 
 const WhatWeDo = styled.div`
@@ -45,16 +46,20 @@ const WhatWeDo = styled.div`
   gap: 10px;
 `
 
-const Line = styled.img`
+const Line = styled.div`
+  background-color: #535861;
+  width: 25px;
   height: 5px;
+  border-radius: 4px;
 `
 
 const Subtitle = styled.h2`
-  color: #da4ea2;
+  color: #3DFFD5;
 `
 
 const Button = styled.div`
-  background-color: #da4ea2;
+  background-color: #2A3331;
+  transition: 0.3s ease-in-out;
   color: white;
   font-weight: 500;
   width: 250px;
@@ -62,6 +67,9 @@ const Button = styled.div`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  &:hover{
+    background-color: #2a3331cc;
+  }
 `
 
 function Index404() {
@@ -79,7 +87,7 @@ function Index404() {
           <Right>
             <Title>We couldn’t find that page.</Title>
             <WhatWeDo>
-              <Line src="./img/line.png"></Line>
+              <Line></Line>
               <Subtitle>404 <FontAwesomeIcon icon={faFaceSadTear} /></Subtitle>
             </WhatWeDo>
             <Button><Link className='link' to={'/'}>Click To Return HomePage</Link></Button>

@@ -38,7 +38,7 @@ function Cube() {
         <meshStandardMaterial>
             <RenderTexture  attach="map">
                 <PerspectiveCamera makeDefault position={[0,0,pos]}/>
-                <color attach='background' args={["#dc9dcd"]}/>
+                <color attach='background' args={["#3DFFD5"]}/>
                 <Text ref={textRef} fontsize={3} color="#555">
                     {msg}
                 </Text>

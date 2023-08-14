@@ -31,29 +31,33 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-size: 74px;
+  color: #E6FBFB;
 `
 
-const WhatWeDo = styled.div`
+const Skills = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
 `
 
-const Line = styled.img`
+const Line = styled.div`
+  background-color: #535861;
+  width: 25px;
   height: 5px;
+  border-radius: 4px;
 `
 
 const Subtitle = styled.h2`
-  color: #da4ea2;
+  color: #2A3331;
 `
 
 const Desc = styled.p`
   font-size: 24px;
-  color: lightgray;
+  color: #deebeb;
 `
 
 const Button = styled.div`
-  background-color: #da4ea2;
+  background-color: #2A3331;
   color: white;
   font-weight: 500;
   width: 120px;
@@ -61,6 +65,27 @@ const Button = styled.div`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+`
+
+const GitBtn = styled(Button)`
+  background-color: #010409;
+  &:hover{
+    background-color: white;
+    .social{
+      color: #010409;
+    }
+  }
+`
+
+const LinBtn = styled(Button)`
+  background-color: #0B66C2;
+  &:hover{
+    background-color: white;
+    .social{
+      color: #0B66C2;
+    }
+  }
 `
 
 const BtnWrapper = styled.div`
@@ -108,14 +133,14 @@ function Hero() {
         <Container>
           <Left>
             <Title>Ahmet Özenir</Title>
-            <WhatWeDo>
-              <Line src="./img/line.png"></Line>
+            <Skills>
+              <Line></Line>
               <Subtitle>Front-End Web Dev.</Subtitle>
-            </WhatWeDo>
+            </Skills>
             <Desc>React, JS, Bootstrap, Tailwind, SCSS</Desc>
             <BtnWrapper>
-              <Button>GitHub <FontAwesomeIcon icon={faGithub} /></Button>
-              <Button>Linkedin <FontAwesomeIcon icon={faLinkedin} /></Button>
+              <GitBtn><a className="social" href="">GitHub <FontAwesomeIcon style={{fontSize:'1.3rem', marginLeft:'5px'}} icon={faGithub} /></a></GitBtn>
+              <LinBtn><a className="social" href="">Linkedin <FontAwesomeIcon style={{fontSize:'1.3rem', marginLeft:'5px'}} icon={faLinkedin} /></a></LinBtn>
             </BtnWrapper>
           </Left>
           <Right>

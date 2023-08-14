@@ -28,8 +28,8 @@ const Left = styled.div`
 `
 
 const Title = styled.h1`
-  font-weight: 200;
-  
+  font-weight: 600;
+  color: #2A3331;
 `
 
 const Form = styled.form`
@@ -44,24 +44,38 @@ const Input = styled.input`
   background-color: #dedede;
   border: none;
   border-radius: 5px;
+  &:focus{
+    outline: 2px solid #2A3331;
+  }
 `
 
 const TextArea = styled.textarea`
   padding: 20px;
   background-color: #dedede;
+  min-height: 100px;
+  max-height: 280px;
   border: none;
   border-radius: 5px;
+  &:focus{
+    outline: 2px solid #2A3331;
+  }
 `
 
 const Button = styled.button`
-  background-color: #de4ea2;
+  background-color: #2A3331;;
+  transition: 0.3s ease-in-out;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   padding: 20px;  
-  
+  &:hover{
+    background-color: #2a3331cc;
+  }
+  &:focus{
+    outline: 2px solid #989898;
+  }
 `
 
 const Right = styled.div`
@@ -94,7 +108,7 @@ function Contact() {
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
-            <Title>Contact Us</Title>
+            <Title>Contact Me</Title>
             <Input placeholder="Name" name='name' required/>
             <Input type='email' placeholder="Email" name='email' required/>
             <TextArea placeholder="Write Your Message" name='message' rows={10} required/>

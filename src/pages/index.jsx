@@ -4,7 +4,6 @@ import Contact from "../components/contact"
 
 const Container = styled.div`
   height: 100vh;
-  background: url('./img/bg.jpeg');
   color: white;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -19,7 +18,7 @@ function Index() {
   return (
     <Container>
         <Hero/>
-        <Contact/>
+        <Contact id='a'/>
     </Container>
   )
 }
