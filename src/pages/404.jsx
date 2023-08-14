@@ -3,6 +3,9 @@ import Cube from '../components/cube'
 import { OrbitControls} from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { styled } from "styled-components"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFaceSadTear } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
 
 const Section = styled.div`
   height: 100vh;
@@ -50,16 +53,11 @@ const Subtitle = styled.h2`
   color: #da4ea2;
 `
 
-const Desc = styled.p`
-  font-size: 24px;
-  color: lightgray;
-`
-
 const Button = styled.div`
   background-color: #da4ea2;
   color: white;
   font-weight: 500;
-  width: 120px;
+  width: 250px;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -79,16 +77,12 @@ function Index404() {
           </Canvas>
           </Left>
           <Right>
-            <Title>Think outside the square space</Title>
+            <Title>We couldn’t find that page.</Title>
             <WhatWeDo>
               <Line src="./img/line.png"></Line>
-              <Subtitle>Who we Are</Subtitle>
+              <Subtitle>404 <FontAwesomeIcon icon={faFaceSadTear} /></Subtitle>
             </WhatWeDo>
-            <Desc>
-            a creative group of designers and developers with a passion for the
-            arts.
-            </Desc>
-            <Button>See our works</Button>
+            <Button><Link className='link' to={'/'}>Click To Return HomePage</Link></Button>
           </Right>
         </Container>
     </Section>
