@@ -6,6 +6,8 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 
 const Section = styled.div`
+  height: 100vh;
+  min-height: 613px;
   scroll-snap-align: start;
   scroll-behavior: smooth;
   display: flex;
@@ -19,6 +21,14 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-self: center;
+
+  @media screen and (max-width: 768px){
+    width: 95%;
+  }
+
+  /* @media screen and (max-width: 576px){
+    flex-direction: column;
+  } */
 `
 
 const Left = styled.div`
@@ -32,9 +42,17 @@ const Left = styled.div`
 const Title = styled.h1`
   font-size: 74px;
   color: #E6FBFB;
+
+  @media screen and (max-width: 1374px){
+    font-size: 60px;
+  }
+
+  @media screen and (max-width: 768px){
+    font-size: 40px;
+  }
 `
 
-const Skills = styled.div`
+const JobTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -49,11 +67,27 @@ const Line = styled.div`
 
 const Subtitle = styled.h2`
   color: #2A3331;
+
+  @media screen and (max-width: 1374px){
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 768px){
+    font-size: 20px;
+  }
 `
 
 const Desc = styled.p`
   font-size: 24px;
   color: #deebeb;
+
+  @media screen and (max-width: 1374px){
+    font-size: 22px;
+  }
+
+  @media screen and (max-width: 768px){
+    font-size: 18px;
+  }
 `
 
 const Button = styled.div`
@@ -66,11 +100,17 @@ const Button = styled.div`
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+
+  @media screen and (max-width: 768px){
+    width: 120px;
+    padding: 8px;
+  }
 `
 
 const GitBtn = styled(Button)`
   background-color: #010409;
   &:hover{
+    box-shadow: 0 0 5px 2px #010409;
     background-color: white;
     .social{
       color: #010409;
@@ -81,6 +121,7 @@ const GitBtn = styled(Button)`
 const LinBtn = styled(Button)`
   background-color: #0B66C2;
   &:hover{
+    box-shadow: 0 0 5px 2px #0B66C2;
     background-color: white;
     .social{
       color: #0B66C2;
@@ -100,6 +141,10 @@ const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 576px){
+    display: none;
+  }
 `
 
 const Blob = styled.div`
@@ -122,6 +167,17 @@ const Blob = styled.div`
       border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
     }
   }
+
+  @media screen and (max-width: 1374px){
+    width: 350px;
+    height: 350px;
+  }
+
+  @media screen and (max-width: 768px){
+    width: 270px;
+    height: 270px;
+  }
+  
 `
 
 
@@ -133,10 +189,10 @@ function Hero() {
         <Container>
           <Left>
             <Title>Ahmet Özenir</Title>
-            <Skills>
+            <JobTitle>
               <Line></Line>
               <Subtitle>Front-End Web Dev.</Subtitle>
-            </Skills>
+            </JobTitle>
             <Desc>React, JS, Bootstrap, Tailwind, SCSS</Desc>
             <BtnWrapper>
               <GitBtn><a className="social" href="">GitHub <FontAwesomeIcon style={{fontSize:'1.3rem', marginLeft:'5px'}} icon={faGithub} /></a></GitBtn>

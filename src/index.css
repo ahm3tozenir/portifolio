@@ -19,4 +19,12 @@ body{
 }
 .nav-text-color{
   color: #E6FBFB;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 576px) {
+  .nvbr{
+    background-color: #2a333179;
+    text-align: center !important;
+  }
 }

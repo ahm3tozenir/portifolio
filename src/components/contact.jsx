@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { styled } from "styled-components"
-
+import { OrbitControls} from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import Poly from "./poly"
 
 
 
@@ -44,6 +46,7 @@ const Input = styled.input`
   background-color: #dedede;
   border: none;
   border-radius: 5px;
+  transition: 0.2s ease-in-out;
   &:focus{
     outline: 2px solid #2A3331;
   }
@@ -55,6 +58,7 @@ const TextArea = styled.textarea`
   min-height: 100px;
   max-height: 280px;
   border: none;
+  transition: 0.2s ease-in-out;
   border-radius: 5px;
   &:focus{
     outline: 2px solid #2A3331;
@@ -62,7 +66,7 @@ const TextArea = styled.textarea`
 `
 
 const Button = styled.button`
-  background-color: #2A3331;;
+  background-color: #2A3331;
   transition: 0.3s ease-in-out;
   color: white;
   border: none;
@@ -103,8 +107,10 @@ function Contact() {
   }
 
 
+
+
   return (
-    <Section>
+    <Section id='contact'>
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
@@ -117,6 +123,12 @@ function Contact() {
           </Form>
         </Left>
         <Right>
+          <Canvas camera={{fov:25, position:[5,5,5]}}>
+                <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={3} getPolarAngle={60} getAzimuthalAngle={15} />
+                <ambientLight intensity={3}/>
+                <directionalLight position={[1,1,1]}/>
+                <Poly/>
+          </Canvas>
         </Right>
       </Container>
     </Section>

@@ -2,6 +2,7 @@ import { styled } from "styled-components"
 import Hero from '../components/hero';
 import Contact from "../components/contact"
 
+
 const Container = styled.div`
   height: 100vh;
   color: white;
@@ -18,7 +19,7 @@ function Index() {
   return (
     <Container>
         <Hero/>
-        <Contact id='a'/>
+        <Contact/>
     </Container>
   )
 }
