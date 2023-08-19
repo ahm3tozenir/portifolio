@@ -14,10 +14,10 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Index/>} />
-        <Route path="/projects" element={<Projects/>} />
-        <Route path="/404" element={<Index404/>}/>
-        <Route path="*" element={<Navigate to={'/404'}/>}/>
+        <Route path="/portifolio/" element={<Index/>} />
+        <Route path="/portifolio/projects" element={<Projects/>} />
+        <Route path="/portifolio/404" element={<Index404/>}/>
+        <Route path="*" element={<Navigate to={'/portifolio/404'}/>}/>
       </Routes>
 
     </>
