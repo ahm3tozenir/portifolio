@@ -17,7 +17,7 @@ function App() {
         <Route path="/portifolio/" element={<Index/>} />
         <Route path="/portifolio/projects" element={<Projects/>} />
         <Route path="/portifolio/404" element={<Index404/>}/>
-        <Route path="*" element={<Navigate to={'/portifolio/404'}/>}/>
+        <Route path="/portifolio/*" element={<Navigate to={'/portifolio/404'}/>}/>
       </Routes>
 
     </>
