@@ -90,7 +90,7 @@ function Index404() {
               <Line></Line>
               <Subtitle>404 <FontAwesomeIcon icon={faFaceSadTear} /></Subtitle>
             </WhatWeDo>
-            <Button><Link className='link' to={'/'}>Click To Return HomePage</Link></Button>
+            <Button><Link className='link' to={'/portifolio/'}>Click To Return HomePage</Link></Button>
           </Right>
         </Container>
     </Section>

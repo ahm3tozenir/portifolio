@@ -11,7 +11,7 @@ function Nvbr() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link className='nav-text-color'><Link className='nav-text-color' to={'/projects'}>Projects</Link></Nav.Link>
+            <Nav.Link className='nav-text-color'><Link className='nav-text-color' to={'/portifolio/projects'}>Projects</Link></Nav.Link>
             <Nav.Link className='nav-text-color' href="#contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
